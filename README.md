@@ -97,6 +97,3 @@ All models evaluated via **bootstrap resampling** (1,000 resamples) on the held-
 - Horvath, S., & Raj, K. (2018). DNA methylation-based biomarkers and the epigenetic clock theory of ageing. *Nature Reviews Genetics*, 19(6), 371–384.
 - Du, P., et al. (2010). Comparison of Beta-value and M-value methods for quantifying methylation levels by microarray analysis. *BMC Bioinformatics*, 11, 587.
 
-## License
-
-This project is licensed under the [MIT License](LICENSE).
