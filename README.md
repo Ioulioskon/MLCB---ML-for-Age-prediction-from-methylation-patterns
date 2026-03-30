@@ -90,54 +90,6 @@ All models evaluated via **bootstrap resampling** (1,000 resamples) on the held-
 
 **Classification metrics:** Accuracy, F1, MCC, ROC-AUC, PR-AUC
 
-## Key Results
-
-| Model | Validation RMSE | Validation R² |
-|---|---|---|
-| OLS | 5.25 ± 0.58 | 0.871 ± 0.034 |
-| Elastic Net | 5.49 ± 0.62 | 0.859 ± 0.035 |
-| SVR | 8.96 ± 0.89 | 0.624 ± 0.043 |
-| **Bayesian Ridge** | **4.66 ± 0.56** | **0.898 ± 0.028** |
-
-- Methylation features alone capture nearly all predictive signal; adding metadata (sex, ethnicity) yields negligible improvement.
-- Bayesian Ridge achieved the best validation performance among baseline models.
-- OLS achieves perfect training fit (p > n) but generalises surprisingly well, confirming strong linear signal in the selected CpG sites.
-
-## Getting Started
-
-### Prerequisites
-
-- Python ≥ 3.9
-- pip
-
-### Installation
-
-```bash
-git clone https://github.com/<your-username>/<repo-name>.git
-cd <repo-name>
-pip install -r requirements.txt
-```
-
-### Quick Start
-
-```python
-from src.preprocessing import build_preprocessor
-from src.models import train_bayesian_ridge
-from src.evaluation import bootstrap_evaluate
-
-# Load data
-import pandas as pd
-dev = pd.read_csv("data/development.csv")
-
-# Preprocess and train
-preprocessor = build_preprocessor()
-model = train_bayesian_ridge(dev, preprocessor)
-
-# Evaluate
-results = bootstrap_evaluate(model, test_data, n_resamples=1000)
-print(results)
-```
-
 ## References
 
 - Moore, L. D., Le, T., & Fan, G. (2013). DNA methylation and its basic function. *Neuropsychopharmacology*, 38(1), 23–38.
