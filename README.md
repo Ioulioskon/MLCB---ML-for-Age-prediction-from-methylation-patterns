@@ -16,34 +16,6 @@ DNA methylation at CpG sites changes systematically with age, enabling the const
 - **Metadata:** age, sex, ethnicity
 - **Age range:** 19–101 years (mean 64.5 ± 14.6)
 
-## Project Structure
-
-```
-├── data/
-│   ├── development.csv          # 456-sample development set
-│   └── evaluation.csv           # 100-sample holdout test set
-├── src/
-│   ├── preprocessing.py         # Imputation, beta→M transform, scaling, encoding
-│   ├── feature_selection.py     # Stability Selection & mRMR
-│   ├── models.py                # Model definitions and training
-│   └── evaluation.py            # Bootstrap evaluation and metrics
-├── notebooks/
-│   ├── 01_eda.ipynb             # Exploratory data analysis
-│   ├── 02_feature_matrix.ipynb  # Ablation over feature combinations
-│   ├── 03_baselines.ipynb       # Baseline model comparison
-│   ├── 04_feature_selection.ipynb
-│   ├── 05_hyperparameter_tuning.ipynb
-│   ├── 06_classification.ipynb  # Sex prediction
-│   └── 07_final_evaluation.ipynb
-├── figures/
-├── report/
-│   ├── main.tex
-│   └── bibliography.bib
-├── requirements.txt
-└── README.md
-```
-
-> **Note:** Adjust the tree above to match your actual file layout.
 
 ## Methods
 
